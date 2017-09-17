@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+    <display-name>wbymvc</display-name>
+    <servlet>
+
+        <servlet-name>loginservlet</servlet-name>
+        <servlet-class>com.toz.servlet.loginservlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>loginservlet</servlet-name>
+        <url-pattern>/user/loginservlet</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+
+
+        <servlet-name>exitservlet</servlet-name>
+        <servlet-class>com.toz.servlet.exitservlet</servlet-class>
+    </servlet>
+    <servlet>
+
+        <servlet-name>inputstuinfo</servlet-name>
+        <servlet-class>com.toz.servlet.inputstuinfo</servlet-class>
+    </servlet>
+    <servlet>
+
+        <servlet-name>queryallservlet</servlet-name>
+        <servlet-class>com.toz.servlet.queryallservlet</servlet-class>
+    </servlet>
+    <servlet>
+
+        <servlet-name>modifyonestuservlet</servlet-name>
+        <servlet-class>com.toz.servlet.modifyonestuservlet</servlet-class>
+    </servlet>
+    <servlet>
+
+        <servlet-name>modifyonestuinfo</servlet-name>
+        <servlet-class>com.toz.servlet.modifyonestuinfo</servlet-class>
+    </servlet>
+    <servlet>
+
+        <servlet-name>deletestudent</servlet-name>
+        <servlet-class>com.toz.servlet.deletestudent</servlet-class>
+    </servlet>
+
+
+
+
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>exitservlet</servlet-name>
+        <url-pattern>/user/exitservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inputstuinfo</servlet-name>
+        <url-pattern>/student/inputstuinfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>queryallservlet</servlet-name>
+        <url-pattern>/student/queryallservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>modifyonestuservlet</servlet-name>
+        <url-pattern>/student/modifyonestuservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>modifyonestuinfo</servlet-name>
+        <url-pattern>/student/modifyonestuinfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>deletestudent</servlet-name>
+        <url-pattern>/student/deletestudent</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
