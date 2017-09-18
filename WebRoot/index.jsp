@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 text-align: center;
                 position: relative;
             }
-            input{
+            input:not[name=imageCode]{
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -47,19 +47,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             }
         </style>
   </head>
-  
+
   <body>
-  <div class="container"style=" width: 200px;height: 200px;">
-          <form action="user/loginservlet" name="login"  method="post">
+  <div class="container" style=" width: 200px;height: 200px;">
+      <form action="user/loginservlet" name="login" method="post">
           <div class="form-group">
-              <input type="text" name="username" id="Input-Username" placeholder="Username" class="form-control" style="width: 150px">
+              <input type="text" name="username" id="Input-Username" placeholder="Username" class="form-control"
+                     style="width: 150px">
           </div>
           <div class="form-group">
-              <input type="password" name="password"id="Input-Password" placeholder="Password" class="form-control" style="width: 150px">
+              <input type="password" name="password" id="Input-Password" placeholder="Password" class="form-control"
+                     style="width: 150px">
           </div>
-              <div class="form-group">
-                  <input type="submit" class="btn btn-default" value="Submit">
-              </div>
+          <div class="form-group" style="width: 150px">
+            <input type="text"  value="${imageCode }" name="imageCode" id="imageCode" placeholder="Check" class="form-control"style="width: 80px;display: inline"/><img onclick="javascript:loadimage();" title="换一张试试" name="randImage" id="randImage"
+                   src="image.jsp" width="70" height="30" border="1" class="img-responsive" STYLE="display: inline" >
+          </div>
+          <div class="form-group" >
+              <input type="submit" class="btn btn-default" value="Submit">
+          </div>
+          <div class="form-group">
+              <font color="red">${error}</font>
+          </div>
 <%
     session=request.getSession();
     session.setAttribute("aa",0);
@@ -68,6 +77,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
           </form>
+      <script type="text/javascript">
+          function loadimage(){
+              document.getElementById("randImage").src = "image.jsp?"+Math.random();
+          }
+      </script>
 
   </div>
 
