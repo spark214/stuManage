@@ -50,6 +50,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   <body>
   <div class="container" style=" width: 200px;height: 200px;">
+
       <form action="user/loginservlet" name="login" method="post">
           <div class="form-group">
               <input type="text" name="username" id="Input-Username" placeholder="Username" class="form-control"
@@ -69,14 +70,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <div class="form-group">
               <font color="red">${error}</font>
           </div>
-<%
-    session=request.getSession();
-    session.setAttribute("aa",0);
-%>
-
 
 
           </form>
+
       <script type="text/javascript">
           function loadimage(){
               document.getElementById("randImage").src = "image.jsp?"+Math.random();

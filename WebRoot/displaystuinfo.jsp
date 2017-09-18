@@ -136,7 +136,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<tr>
 					<td><input class="easyui-textbox" type="text" name="nicheng"
 							   data-options="label:'Name:',required:true"></td>
-					<td><label for="truename">真实姓名</label>><input type="text" name="truename" id="truename"
+					<td><label for="truename">真实姓名</label><input type="text" name="truename" id="truename"
 																  class="easyui-validatebox" required="true"></td>
 					<td><input class="easyui-textbox" name="csrq" data-options="label:'CSRQ:',required:true"></td>
 				</tr>

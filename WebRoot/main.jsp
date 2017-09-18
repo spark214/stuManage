@@ -64,8 +64,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </ul>
       </div>
 
-      <div title="用户信息" data-options="iconCls:'icon-reload'" style="padding:10px;">
-        <li><a href="user/exitservlet" >退出系统</a></li>
+      <div title="用户信息" data-options="iconCls:'icon-reload',selected:true" style="padding:10px;">
+        <ul>
+          <li><a href="user/exitservlet" >退出系统</a></li>
+        </ul>
+
       </div>
 
     </div>
